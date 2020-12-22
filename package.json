@@ -1,5 +1,5 @@
 {
-  "name": "@meema/meema-utils",
+  "name": "meema-utils",
   "version": "1.0.2",
   "description": "JS and CSS Utils for Apps",
   "main": "./index.js",
