@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "JS and CSS Utils for Apps",
   "main": "./index.js",
+  "private": false,
   "scripts": {
     "build": "npx tsc",
     "publish:start": "rm -rf dist && npm run build && cp README.md dist/README.md && cp package.json dist/package.json && npm publish dist && git push"
