@@ -1,0 +1,25 @@
+{
+  "name": "meema-utils",
+  "version": "1.0.1",
+  "description": "JS and CSS Utils for Applications",
+  "main": "./index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "publish:start": "rm -rf dist && npm run build && cp README.md dist/README.md && cp package.json dist/package.json && npm publish dist && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meema-Tech/utils.git"
+  },
+  "keywords": [
+    "utils",
+    "js",
+    "css"
+  ],
+  "author": "git@github.com:Meema-Tech/utils.git",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Meema-Tech/utils/issues"
+  },
+  "homepage": "https://github.com/Meema-Tech/utils#readme"
+}
