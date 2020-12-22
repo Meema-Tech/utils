@@ -1,6 +1,6 @@
 {
   "name": "@meema/meema-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JS and CSS Utils for Apps",
   "main": "./index.js",
   "scripts": {
