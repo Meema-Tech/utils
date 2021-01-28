@@ -1,15 +1,33 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
-    "lib": ["es2017", "es7", "es6", "dom"],
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "allowJs": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
     "declaration": true,
-    "outDir": "dist",
+    "noEmitOnError": true,
     "strict": true,
-    "esModuleInterop": true
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "outDir": "dist/",
+    "lib": [
+      "es7",
+      "dom"
+    ]
   },
   "exclude": [
     "node_modules",
     "dist"
+  ],
+  "include": [
+    "src/**/*"
   ]
 }
