@@ -1,4 +1,7 @@
-import { PixelToRemFn } from "./types";
+// import { PixelToRemFn } from "./types";
+export interface PixelToRemFn<> { 
+  (px: number, pxBase?: number): string;
+}
 
 export const pixelToRem: PixelToRemFn = (px: number, pxBase = 16) => `${(px / pxBase)}rem`;
 

@@ -1,3 +1,0 @@
-export interface PixelToRemFn<> { 
-  (px: number, pxBase?: number): string;
-}
