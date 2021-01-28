@@ -2,8 +2,8 @@
   "name": "meema.utils",
   "version": "1.1.5",
   "description": "JS and CSS Utils for Apps",
-  "main": "./index.js",
-  "types": "types.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "npx tsc",
     "publish:start": "rm -rf dist && npm run build && cp README.md dist/README.md && cp package.json dist/package.json && npm publish dist && git push"
