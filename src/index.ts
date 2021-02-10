@@ -1,40 +1,4 @@
 import { css, CSSProp, CSSObject } from "styled-components";
-export type CustomCSSType = CSSProp | CSSObject;
-
-export interface IElement {
-  customCss?: CustomCSSType;
-}
-
-interface PixelToRemFn<> { 
-  (px: number, pxBase?: number): string;
-}
-export const pixelToRem: PixelToRemFn = (px: number, pxBase = 16) => `${(px / pxBase)}rem`;
-
-interface FontFaceFn<> { 
-  (fontFamily: string, src: string, fontWeight?: number, fontStyle?: string): CustomCSSType;
-}
-export const fontFace: FontFaceFn = (
-  fontFamily,
-  src,
-  fontWeight = 500,
-  fontStyle = 'normal',
-) => {
-  return css`
-    @font-face {
-      font-family: ${fontFamily};
-      font-style: ${fontStyle};
-      font-weight: ${fontWeight};
-      src: url(${src});
-    }
-  `
-};
-
-interface IsMobileFn<> {
-  (): boolean;
-}
-export const isMobile: IsMobileFn = () => (
-  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(window.navigator.userAgent)
-);
 
 export interface ITheme {
   borderRadius: number;
@@ -210,3 +174,68 @@ export interface ITheme {
     };
   };
 }
+
+export type CustomCSSType = CSSProp | CSSObject;
+interface PixelToRemFn<> { 
+  (px: number, pxBase?: number): string;
+}
+export const pixelToRem: PixelToRemFn = (px: number, pxBase = 16) => `${(px / pxBase)}rem`;
+
+interface FontFaceFn<> { 
+  (fontFamily: string, src: string, fontWeight?: number, fontStyle?: string): CustomCSSType;
+}
+export const fontFace: FontFaceFn = (
+  fontFamily,
+  src,
+  fontWeight = 500,
+  fontStyle = 'normal',
+) => (
+  css`
+    @font-face {
+      font-family: ${fontFamily};
+      font-style: ${fontStyle};
+      font-weight: ${fontWeight};
+      src: url(${src});
+    }
+  `
+);
+
+interface IsMobileFn<> {
+  (): boolean;
+}
+export const isMobile: IsMobileFn = () => (
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(window.navigator.userAgent)
+);
+
+export const alignMiddle = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+interface BackgroundImageFn<> {
+  (src: string, backgroundColor?: string, size?: string, position?: string, repeat?: string): CustomCSSType;
+}
+export const backgroundImage: BackgroundImageFn = (
+  src,
+  backgroundColor = 'transparent',
+  size = 'cover',
+  position = 'center',
+  repeat = 'no-repeat',
+  ) => css`
+
+  background-color: ${backgroundColor};
+  background-image: url(${src});
+  background-size: ${size};
+  background-position: ${position};
+  background-repeat: ${repeat};
+`;
+
+
+// export const transition = (durationMs: number) => css`
+//   transition: all ${durationMs ? `${durationMs}ms` : '250ms'} ease;
+// `
+
+// export const textShadow = css`
+//   text-shadow: ${pixelToRem(1)} ${pixelToRem(1)} ${pixelToRem(2)} ${(props => props.theme.color.secondary.normal)};
+// `;
