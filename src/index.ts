@@ -133,7 +133,7 @@ export interface ITheme {
         boldItalic?: string;
         extraBold?: string;
       };
-      secondary: {
+      secondary?: {
         light?: string;
         thin?: string;
         book?: string;
@@ -146,7 +146,7 @@ export interface ITheme {
         boldItalic?: string;
         extraBold?: string;
       };
-      tertiary: {
+      tertiary?: {
         light?: string;
         thin?: string;
         book?: string;
