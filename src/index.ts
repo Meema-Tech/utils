@@ -16,21 +16,25 @@ export interface ITheme {
       dark?: string;
     };
     tertiary?: {
+      extraLight?: string;
       light?: string;
       normal?: string;
       dark?: string;
     };
     success?: {
+      extraLight?: string;
       light?: string;
       normal?: string;
       dark?: string;
     };
     warning?: {
+      extraLight?: string;
       light?: string;
       normal?: string;
       dark?: string;
     };
     error?: {
+      extraLight?: string;
       light?: string;
       normal?: string;
       dark?: string;
@@ -39,16 +43,19 @@ export interface ITheme {
   heading: {
     color: {
       primary: {
+        extraLight?: string;
         light?: string;
         normal?: string;
         dark?: string;
       };
       secondary?: {
+        extraLight?: string;
         light?: string;
         normal?: string;
         dark?: string;
       };
       tertiary?: {
+        extraLight?: string;
         light?: string;
         normal?: string;
         dark?: string;
@@ -58,16 +65,19 @@ export interface ITheme {
   text: {
     color: {
       primary: {
+        extraLight?: string;
         light?: string;
         normal?: string;
         dark?: string;
       };
       secondary?: {
+        extraLight?: string;
         light?: string;
         normal?: string;
         dark?: string;
       };
       tertiary?: {
+        extraLight?: string;
         light?: string;
         normal?: string;
         dark?: string;
@@ -203,7 +213,7 @@ export const fontFace: FontFaceFn = (
 interface IsMobileFn<> {
   (): boolean;
 }
-export const isMobile: IsMobileFn = () => (
+export const isMobile:IsMobileFn = () => (
   /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(window.navigator.userAgent)
 );
 
@@ -222,20 +232,10 @@ export const backgroundImage: BackgroundImageFn = (
   size = 'cover',
   position = 'center',
   repeat = 'no-repeat',
-  ) => css`
-
+) => css`
   background-color: ${backgroundColor};
   background-image: url(${src});
   background-size: ${size};
   background-position: ${position};
   background-repeat: ${repeat};
 `;
-
-
-// export const transition = (durationMs: number) => css`
-//   transition: all ${durationMs ? `${durationMs}ms` : '250ms'} ease;
-// `
-
-// export const textShadow = css`
-//   text-shadow: ${pixelToRem(1)} ${pixelToRem(1)} ${pixelToRem(2)} ${(props => props.theme.color.secondary.normal)};
-// `;
