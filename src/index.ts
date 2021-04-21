@@ -77,13 +77,18 @@ export interface ITheme {
     };
   };
   header: {
-    height: {
-      desktop: {
+    height?: {
+      mobile?: {
         small?: number;
         normal?: number;
         large?: number;
       };
-      mobile: {
+      tablet?: {
+        small?: number;
+        normal?: number;
+        large?: number;
+      };
+      desktop?: {
         small?: number;
         normal?: number;
         large?: number;
@@ -91,13 +96,18 @@ export interface ITheme {
     };
   };
   footer: {
-    height: {
-      desktop: {
+    height?: {
+      mobile?: {
         small?: number;
         normal?: number;
         large?: number;
       };
-      mobile: {
+      tablet?: {
+        small?: number;
+        normal?: number;
+        large?: number;
+      };
+      desktop?: {
         small?: number;
         normal?: number;
         large?: number;
