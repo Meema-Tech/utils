@@ -80,12 +80,12 @@ export interface ITheme {
     height: {
       desktop: {
         small?: number;
-        normal: number;
+        normal?: number;
         large?: number;
       };
       mobile: {
         small?: number;
-        normal: number;
+        normal?: number;
         large?: number;
       };
     };
@@ -94,12 +94,12 @@ export interface ITheme {
     height: {
       desktop: {
         small?: number;
-        normal: number;
+        normal?: number;
         large?: number;
       };
       mobile: {
         small?: number;
-        normal: number;
+        normal?: number;
         large?: number;
       };
     };
