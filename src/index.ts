@@ -59,10 +59,7 @@ export interface ITheme {
       button?: number;
     };
     family: {
-      primary: IFontFamily;
-      secondary?: IFontFamily;
-      tertiary?: IFontFamily;
-      _default: {
+      _default?: {
         h1?: string;
         h2?: string;
         h3?: string;
@@ -74,6 +71,9 @@ export interface ITheme {
         span?: string;
         button?: string;
       }
+      primary: IFontFamily;
+      secondary?: IFontFamily;
+      tertiary?: IFontFamily;
     };
   };
   header: {
