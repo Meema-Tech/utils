@@ -1,87 +1,48 @@
 import { css, CSSProp, CSSObject } from "styled-components";
 
+interface IColor {
+  extraLight?: string;
+  light?: string;
+  normal?: string;
+  dark?: string;
+  extraDark?: string;
+}
+
+interface IFontFamily {
+  light?: string;
+  thin?: string;
+  book?: string;
+  medium?: string;
+  regular?: string;
+  black?: string;
+  blackItalic?: string;
+  extraBlack?: string;
+  bold?: string;
+  boldItalic?: string;
+  extraBold?: string;
+}
 export interface ITheme {
   borderRadius: number;
   color: {
-    primary: {
-      extraLight?: string;
-      light?: string;
-      normal?: string;
-      dark?: string;
-    };
-    secondary?: {
-      extraLight?: string;
-      light?: string;
-      normal?: string;
-      dark?: string;
-    };
-    tertiary?: {
-      extraLight?: string;
-      light?: string;
-      normal?: string;
-      dark?: string;
-    };
-    success?: {
-      extraLight?: string;
-      light?: string;
-      normal?: string;
-      dark?: string;
-    };
-    warning?: {
-      extraLight?: string;
-      light?: string;
-      normal?: string;
-      dark?: string;
-    };
-    error?: {
-      extraLight?: string;
-      light?: string;
-      normal?: string;
-      dark?: string;
-    };
+    primary: IColor;
+    secondary?: IColor;
+    tertiary?: IColor;
+    success?: IColor;
+    warning?: IColor;
+    error?: IColor;
   };
   heading: {
     color: {
-      primary: {
-        extraLight?: string;
-        light?: string;
-        normal?: string;
-        dark?: string;
-      };
-      secondary?: {
-        extraLight?: string;
-        light?: string;
-        normal?: string;
-        dark?: string;
-      };
-      tertiary?: {
-        extraLight?: string;
-        light?: string;
-        normal?: string;
-        dark?: string;
-      };
+      primary: IColor;
+      secondary?: IColor;
+      tertiary?: IColor;
     }
   };
   text: {
     color: {
-      primary: {
-        extraLight?: string;
-        light?: string;
-        normal?: string;
-        dark?: string;
-      };
-      secondary?: {
-        extraLight?: string;
-        light?: string;
-        normal?: string;
-        dark?: string;
-      };
-      tertiary?: {
-        extraLight?: string;
-        light?: string;
-        normal?: string;
-        dark?: string;
-      };
+      primary: IColor;
+      secondary?: IColor;
+      tertiary?: IColor;
     }
   };
   font: {
@@ -94,45 +55,9 @@ export interface ITheme {
       button?: number;
     };
     family: {
-      primary: {
-        light?: string;
-        thin?: string;
-        book?: string;
-        medium?: string;
-        regular?: string;
-        black?: string;
-        blackItalic?: string;
-        extraBlack?: string;
-        bold?: string;
-        boldItalic?: string;
-        extraBold?: string;
-      };
-      secondary?: {
-        light?: string;
-        thin?: string;
-        book?: string;
-        medium?: string;
-        regular?: string;
-        black?: string;
-        blackItalic?: string;
-        extraBlack?: string;
-        bold?: string;
-        boldItalic?: string;
-        extraBold?: string;
-      };
-      tertiary?: {
-        light?: string;
-        thin?: string;
-        book?: string;
-        medium?: string;
-        regular?: string;
-        black?: string;
-        blackItalic?: string;
-        extraBlack?: string;
-        bold?: string;
-        boldItalic?: string;
-        extraBold?: string;
-      };
+      primary: IFontFamily;
+      secondary?: IFontFamily;
+      tertiary?: IFontFamily;
       _default: {
         h1?: string;
         h2?: string;
