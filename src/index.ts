@@ -50,6 +50,10 @@ export interface ITheme {
       _default?: number;
       h1?: number;
       h2?: number;
+      h3?: number;
+      h4?: number;
+      h5?: number;
+      h6?: number;
       p?: number;
       span?: number;
       button?: number;
@@ -74,25 +78,29 @@ export interface ITheme {
   };
   header: {
     height: {
-    desktop: {
-      small: number;
-      large: number;
+      desktop: {
+        small?: number;
+        normal: number;
+        large?: number;
+      };
+      mobile: {
+        small?: number;
+        normal: number;
+        large?: number;
+      };
     };
-    mobile: {
-      small: number;
-      large: number;
-    };
-  };
   };
   footer: {
     height: {
       desktop: {
-        small: number;
-        large: number;
+        small?: number;
+        normal: number;
+        large?: number;
       };
       mobile: {
-        small: number;
-        large: number;
+        small?: number;
+        normal: number;
+        large?: number;
       };
     };
   };
