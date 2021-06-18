@@ -8,6 +8,10 @@ interface IColor {
   extraDark?: string;
 }
 
+interface BackgroundImageFn<> {
+  (src: string, backgroundColor?: string, size?: string, position?: string, repeat?: string): CustomCSSType;
+}
+
 interface IFontFamily {
   light?: string;
   thin?: string;
@@ -128,6 +132,10 @@ export interface ITheme {
   };
 }
 
+interface IsMobileFn<> {
+  (): boolean;
+}
+
 export type CustomCSSType = CSSProp | CSSObject;
 interface PixelToRemFn<> { 
   (px: number, pxBase?: number): string;
@@ -137,6 +145,7 @@ export const pixelToRem: PixelToRemFn = (px: number, pxBase = 16) => `${(px / px
 interface FontFaceFn<> { 
   (fontFamily: string, src: string, fontWeight?: number, fontStyle?: string): CustomCSSType;
 }
+
 export const fontFace: FontFaceFn = (
   fontFamily,
   src,
@@ -153,9 +162,10 @@ export const fontFace: FontFaceFn = (
   `
 );
 
-interface IsMobileFn<> {
-  (): boolean;
-}
+export const truncate = (str = '', maxLength = 120): string => {
+  return `${(str && str.length >= maxLength - 3) ? `${str.slice(0, maxLength - 3)}...` : str}`;
+};
+
 export const isMobile:IsMobileFn = () => (
   /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(window.navigator.userAgent)
 );
@@ -166,9 +176,6 @@ export const alignMiddle = css`
   justify-content: center;
 `;
 
-interface BackgroundImageFn<> {
-  (src: string, backgroundColor?: string, size?: string, position?: string, repeat?: string): CustomCSSType;
-}
 export const backgroundImage: BackgroundImageFn = (
   src,
   backgroundColor = 'transparent',
